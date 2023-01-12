@@ -1,0 +1,156 @@
+#1 [internal] load build definition from Dockerfile
+#1 sha256:72f9a54de6e418c59cdf2fe9cd5cf5cbc87098d85a1a35424dc30bbae6df4be6
+#1 transferring dockerfile: 37B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:373b2fdda4a156b3c6a65226e89e4df695a109ff924a18a274faa087c5e582cb
+#2 transferring context: 52B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:alpine
+#3 sha256:01f7ac29894dc09ece1f689cfed91ed78c6ade8e765955037bbf2141e10ca243
+#3 DONE 1.0s
+
+#4 [runner 1/8] FROM docker.io/library/node:alpine@sha256:ab3603cb7934b21f1ffb522b1a1d538809516c6e4cd73b144716bc1830aad1a6
+#4 sha256:f89e46e542256aeedd124c4603c5d833e9c8f4fb374433cbfd5bc5fa2431c63f
+#4 DONE 0.0s
+
+#5 [runner 2/8] WORKDIR /app
+#5 sha256:bbf6554166a06a5ebccdf7ffc68483ea6443b70871e953926c5de0c9ce155f6a
+#5 CACHED
+
+#6 [runner 3/8] RUN addgroup --system --gid 1001 nodejs
+#6 sha256:b813cb5fd08fb3090ad61a1a7ea0f4a245aefb2cb82672d25241a5beed71e63b
+#6 CACHED
+
+#7 [runner 4/8] RUN adduser --system --uid 1001 nextjs
+#7 sha256:f010d6e0ba727470a3f854c9d0eab3b418c82a2d9a6cb7796a1b3277e142b0f4
+#7 CACHED
+
+#11 [internal] load build context
+#11 sha256:42ba3acc603fdb2b44e165242d4d7bec58ba4ec99508f0669def62884bf76cfa
+#11 transferring context: 62.92kB 1.1s done
+#11 DONE 1.1s
+
+#10 [builder 4/7] WORKDIR /app
+#10 sha256:f6a7a1fa475291ef637b6e86b454c14c6f0e02fad4d7f68ac4cc66a9cc272704
+#10 CACHED
+
+#8 [builder 2/7] RUN apk add --no-cache libc6-compat
+#8 sha256:5b13c9c13f031ea6734fd47ffe8c7e9d570a7feb33d0a64b660adb475242495c
+#8 CACHED
+
+#9 [builder 3/7] RUN apk update
+#9 sha256:3a41951c88ca72decb9bdf0a4fcb691ac547d58d03fe577e8e9ddae239e0d2dc
+#9 CACHED
+
+#13 [builder 5/7] RUN yarn global add turbo
+#13 sha256:09b6442131ae2cbe8801d1e69cdc0ff351d066f526954b982e24c7c72be0059a
+#13 CACHED
+
+#14 [builder 6/7] COPY . .
+#14 sha256:b1b490e948f63a9148b4b0fc85762c14734b367951f1e97e4182775bd2c06532
+#14 DONE 1.5s
+
+#15 [builder 7/7] RUN turbo prune --scope=web --docker
+#15 sha256:c6f60c257d81e66da0d8c85beb2c17468e6111765817b4923cb91c00a0a802a6
+#15 0.441 Generating pruned monorepo for web in /app/out
+#15 0.486  - Added web
+#15 0.488  - Added ui
+#15 0.488  - Added eslint-config-custom
+#15 0.489  - Added tsconfig
+#15 DONE 0.5s
+
+#12 [installer  5/11] COPY .gitignore .gitignore
+#12 sha256:769b862a25902956c7a5516091e3871fc254a0d5a31c038e112113da0fab2aa8
+#12 CACHED
+
+#16 [installer  6/11] COPY --from=builder /app/out/json/ .
+#16 sha256:6626cddba4e671b5c45ac18ba127faeefa74eef81b2ce24c58ed6c3de29921d7
+#16 CACHED
+
+#17 [installer  7/11] COPY --from=builder /app/out/yarn.lock ./yarn.lock
+#17 sha256:85288bbafcfa5b2e78a7f137d69fc0f7183bc4b152490a3bef6f62061ed03be1
+#17 CACHED
+
+#18 [installer  8/11] RUN yarn install
+#18 sha256:0b2ffa5077edaba51607f6d1e72a5d07340578972eaf88f9e24762755d1da3da
+#18 CACHED
+
+#19 [installer  9/11] COPY --from=builder /app/out/full/ .
+#19 sha256:b9b750bbe23411e4bc54c6e283e5b2f38677978b41864d0c0d97207f59ffc990
+#19 DONE 0.1s
+
+#20 [installer 10/11] COPY turbo.json turbo.json
+#20 sha256:67868974cccfc96355af499a6b3764a053023a095b98d069eaaa047d2abf3096
+#20 DONE 0.0s
+
+#21 [installer 11/11] RUN yarn turbo run build --filter=web...
+#21 sha256:737b59fbe897ee39edb0a395bfbcbdff58c287bfd0a84fd4ada30abdfe8dbc67
+#21 0.263 yarn run v1.22.19
+#21 0.288 $ /app/node_modules/.bin/turbo run build --filter=web...
+#21 0.529  WARNING  cannot find a .git folder. Falling back to manual file hashing (which may be slower). If you are running this build in a pruned directory, you can ignore this message. Otherwise, please initialize a git repository in the root of your monorepo
+#21 0.558 • Packages in scope: eslint-config-custom, tsconfig, ui, web
+#21 0.558 • Running build in 4 packages
+#21 0.558 • Remote caching disabled
+#21 0.558 web:build: cache miss, executing 1f6db117a210b593
+#21 0.689 web:build: $ next build
+#21 1.012 web:build: warn  - You have enabled experimental feature (outputFileTracingRoot) in next.config.js.
+#21 1.012 web:build: warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+#21 1.012 web:build: 
+#21 1.022 web:build: Attention: Next.js now collects completely anonymous telemetry regarding usage.
+#21 1.022 web:build: This information is used to shape Next.js' roadmap and prioritize features.
+#21 1.022 web:build: You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+#21 1.022 web:build: https://nextjs.org/telemetry
+#21 1.022 web:build: 
+#21 1.132 web:build: info  - Linting and checking validity of types...
+#21 3.205 web:build: info  - Creating an optimized production build...
+#21 5.544 web:build: info  - Compiled successfully
+#21 5.544 web:build: info  - Collecting page data...
+#21 9.592 web:build: info  - Generating static pages (0/3)
+#21 9.712 web:build: info  - Generating static pages (3/3)
+#21 9.737 web:build: info  - Finalizing page optimization...
+#21 9.743 web:build: 
+#21 9.774 web:build: Route (pages)                              Size     First Load JS
+#21 9.774 web:build: ┌ ○ /                                      1.49 kB        74.9 kB
+#21 9.774 web:build: └ ○ /404                                   181 B          73.6 kB
+#21 9.774 web:build: + First Load JS shared by all              73.4 kB
+#21 9.774 web:build:   ├ chunks/framework-243a035bd446de52.js   45.4 kB
+#21 9.774 web:build:   ├ chunks/main-d309b8651496a8ed.js        27.1 kB
+#21 9.774 web:build:   ├ chunks/pages/_app-03f04c30f397e7c8.js  196 B
+#21 9.774 web:build:   └ chunks/webpack-9339c7e225139a0a.js     776 B
+#21 9.774 web:build: 
+#21 9.774 web:build: ○  (Static)  automatically rendered as static HTML (uses no initial props)
+#21 9.774 web:build: 
+#21 10.39 
+#21 10.39  Tasks:    1 successful, 1 total
+#21 10.39 Cached:    0 cached, 1 total
+#21 10.39   Time:    10.008s 
+#21 10.39 
+#21 10.54 Done in 10.28s.
+#21 DONE 10.7s
+
+#22 [runner 5/8] COPY --from=installer /app/apps/web/next.config.js .
+#22 sha256:78525b2324171fad6acb7043d959be3511da53efda3df94ddbd23c07eab02109
+#22 DONE 0.0s
+
+#23 [runner 6/8] COPY --from=installer /app/apps/web/package.json .
+#23 sha256:2d9dd35edaaae118736844c60ce7529aa5cfc8f05192583dbefcc4ba8d71c782
+#23 DONE 0.1s
+
+#24 [runner 7/8] COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next/standalone ./
+#24 sha256:31e478b1764c7b09fe7d6c5bab6a8d41730932783c9fd2d78d7514c88fc4c9ad
+#24 DONE 0.1s
+
+#25 [runner 8/8] COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next/static ./apps/web/.next/static
+#25 sha256:ad9e9f3415f6db3bf4a8f7690a82108d364804f4d1f505564afaccf96e30cdd8
+#25 DONE 0.0s
+
+#26 exporting to image
+#26 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#26 exporting layers 0.1s done
+#26 writing image sha256:4a4d608e5318f6243bcb0702c20b36f82dea3c2ad58da6b0f75ded231360bc73 done
+#26 DONE 0.1s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
