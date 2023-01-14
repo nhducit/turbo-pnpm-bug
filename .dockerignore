@@ -1,5 +1,9 @@
 node_modules
+<<<<<<< HEAD
 .next
 .turbo
 dist
 out
+=======
+out
+>>>>>>> d417ea9 (add build command)

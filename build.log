@@ -1,5 +1,6 @@
 #1 [internal] load build definition from Dockerfile
 <<<<<<< HEAD
+<<<<<<< HEAD
 #1 sha256:c6501015110d10e25858d3d7f48ba3960c888f956379fe0c4fda119b7e4dde90
 #1 transferring dockerfile: 1.87kB done
 #1 DONE 0.0s
@@ -171,155 +172,98 @@
 #1 sha256:11605475e7cee0f02437ab9d8e1e600dbe932b1b01d728b6e504d0528b47ddf4
 #1 transferring dockerfile: 1.87kB 0.0s done
 #1 DONE 0.1s
+=======
+#1 sha256:60c3cccfbc8046175457f0140753d8f2f5db6023e0bfca1adef3cf9dc34c9a2c
+#1 transferring dockerfile: 1.87kB done
+#1 DONE 0.0s
+>>>>>>> d417ea9 (add build command)
 
 #2 [internal] load .dockerignore
-#2 sha256:2a45b73847fc90795740328c70d72bcd333bdea3205946d492f32d2fea2d9529
+#2 sha256:8418464316355ef16e2814a8e9dbff9446191375268e9d8185026847b2080823
 #2 transferring context: 34B done
 #2 DONE 0.0s
 
-#3 [internal] load metadata for docker.io/library/node:16-alpine
-#3 sha256:ddb9c045298b963a74da7d79709894de6ba60a3c4d7eb58dffb88632ce1bf43b
-#3 DONE 2.4s
+#3 [internal] load metadata for docker.io/library/node:18-alpine
+#3 sha256:5ee8ea8626137e4a4e007f934eed3f693a5155be1152f5d3acaa7750c4ab9271
+#3 DONE 1.2s
 
-#4 [builder 1/7] FROM docker.io/library/node:16-alpine@sha256:1298fd170c45954fec3d4d063437750f89802d72743816663664cfe9aa152b4b
-#4 sha256:d207a2c9907015225fbad50f1ebf3783a5ffa533d2c8f9dff80b91e3f4b88af4
-#4 resolve docker.io/library/node:16-alpine@sha256:1298fd170c45954fec3d4d063437750f89802d72743816663664cfe9aa152b4b done
-#4 sha256:9903ed942feca9a23884ff22ab7510ca7e3ed63e193e573e5b9397863771e219 0B / 449B 0.1s
-#4 sha256:1298fd170c45954fec3d4d063437750f89802d72743816663664cfe9aa152b4b 1.43kB / 1.43kB done
-#4 sha256:32384ac49d1b7d4bd120fca665bb2b22d966ecf950d59bd375332e06c3ca488b 1.16kB / 1.16kB done
-#4 sha256:f4d0f8115ed14d42c783aafd230fa40a2652933d491074591750c07057699cdd 6.45kB / 6.45kB done
-#4 sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9 0B / 36.62MB 0.1s
-#4 sha256:dc47093e946419f96a64c8bda5bd725b3d28a3771adea7040882782db24a8d0e 0B / 2.41MB 0.1s
-#4 ...
-
-#12 [internal] load build context
-#12 sha256:02aa734340d8640df3d398e895054b4b21e474bb4703bd1d75c04ce54413e0a3
-#12 transferring context: 144.06kB 0.1s done
-#12 DONE 0.1s
-
-#4 [builder 1/7] FROM docker.io/library/node:16-alpine@sha256:1298fd170c45954fec3d4d063437750f89802d72743816663664cfe9aa152b4b
-#4 sha256:d207a2c9907015225fbad50f1ebf3783a5ffa533d2c8f9dff80b91e3f4b88af4
-#4 sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9 3.15MB / 36.62MB 0.8s
-#4 sha256:9903ed942feca9a23884ff22ab7510ca7e3ed63e193e573e5b9397863771e219 449B / 449B 1.0s done
-#4 sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9 6.29MB / 36.62MB 1.1s
-#4 sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9 10.49MB / 36.62MB 1.2s
-#4 sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9 13.63MB / 36.62MB 1.4s
-#4 sha256:dc47093e946419f96a64c8bda5bd725b3d28a3771adea7040882782db24a8d0e 2.10MB / 2.41MB 1.4s
-#4 sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9 15.73MB / 36.62MB 1.5s
-#4 sha256:dc47093e946419f96a64c8bda5bd725b3d28a3771adea7040882782db24a8d0e 2.41MB / 2.41MB 1.5s done
-#4 sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9 20.97MB / 36.62MB 1.7s
-#4 sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9 24.12MB / 36.62MB 1.8s
-#4 sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9 27.26MB / 36.62MB 1.9s
-#4 sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9 30.41MB / 36.62MB 2.0s
-#4 sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9 36.62MB / 36.62MB 2.2s done
-#4 extracting sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9
-#4 extracting sha256:f4b29973f215f1a2fa1660e079d82585c55c2c829224bb35a6254fd34bfa64f9 1.1s done
-#4 extracting sha256:dc47093e946419f96a64c8bda5bd725b3d28a3771adea7040882782db24a8d0e
-#4 extracting sha256:dc47093e946419f96a64c8bda5bd725b3d28a3771adea7040882782db24a8d0e 0.1s done
-#4 extracting sha256:9903ed942feca9a23884ff22ab7510ca7e3ed63e193e573e5b9397863771e219
-#4 extracting sha256:9903ed942feca9a23884ff22ab7510ca7e3ed63e193e573e5b9397863771e219 done
-#4 DONE 3.6s
-
-#5 [runner 2/8] WORKDIR /app
-#5 sha256:7623950a2f3d6797bd2cac86546166ad831e4e3365c232d79f7b5b1d48dfdc0a
-#5 DONE 0.1s
-
-#6 [runner 3/8] RUN addgroup --system --gid 1001 nodejs
-#6 sha256:5b9fdbfdc33cba1c30043f37903223a6877ffed1b0505932c8f332b5f528e90a
-#6 DONE 0.2s
-
-#7 [runner 4/8] RUN adduser --system --uid 1001 nextjs
-#7 sha256:0b2119e2e08f481c8ff00042759b14231731c4681868e5649d9ff6bba42f69b6
-#7 DONE 0.2s
+#4 [builder 1/7] FROM docker.io/library/node:18-alpine@sha256:fda98168118e5a8f4269efca4101ee51dd5c75c0fe56d8eb6fad80455c2f5827
+#4 sha256:653270ac117a75d57cbf03113e544d83ca81c638f49e2dc103b2b7a209e74913
+#4 DONE 0.0s
 
 #8 [builder 2/7] RUN apk add --no-cache libc6-compat
-#8 sha256:d8ab4cd54dc8fa96551032887f13d30d4f55d1f97d12c0b604ec389917866f42
-#8 0.225 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/main/aarch64/APKINDEX.tar.gz
-#8 0.742 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/community/aarch64/APKINDEX.tar.gz
-#8 1.750 (1/1) Installing libc6-compat (1.2.3-r4)
-#8 1.791 OK: 10 MiB in 18 packages
-#8 DONE 1.8s
+#8 sha256:eb4d1971c7ec95753c9afc48519235634bd0c8fcdaed3124dee6306a82c0ec8e
+#8 CACHED
+
+#12 [internal] load build context
+#12 sha256:1c99e8998e5f01697dc9c46f9b2519989c8d5621ab44436e602c377bbfab4cd2
+#12 transferring context: 84.00kB 0.1s done
+#12 DONE 0.1s
 
 #9 [installer  3/13] RUN wget -qO /bin/pnpm "https://github.com/pnpm/pnpm/releases/latest/download/pnpm-linuxstatic-x64" && chmod +x /bin/pnpm
-#9 sha256:cd298140085967c0c3e2dbd90a65ded0a5344ad214a4a5844ab82816409616f0
+#9 sha256:022c0b6fb54828838b5b39a231b4e4a2112220ec44b2e7bf32ad9e59c8295951
 #9 ...
 
 #15 [builder 3/7] RUN apk update
-#15 sha256:b61600acb77a6e976a731dadba8bb50738c854197501f0af12d2459aa4d213c6
-#15 0.236 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/main/aarch64/APKINDEX.tar.gz
-#15 0.582 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/community/aarch64/APKINDEX.tar.gz
-#15 0.851 v3.17.1-14-g398aec6128 [https://dl-cdn.alpinelinux.org/alpine/v3.17/main]
-#15 0.851 v3.17.1-15-g051b9a829c [https://dl-cdn.alpinelinux.org/alpine/v3.17/community]
-#15 0.851 OK: 17684 distinct packages available
-#15 DONE 0.9s
+#15 sha256:7eb53cb429d09c4fcd89467bf879cb8da712e5c6f1c80ea306fff6305a805008
+#15 CACHED
 
 #16 [builder 4/7] WORKDIR /app
-#16 sha256:e964982d1534c49c8e4c667279d9dce0b1c545864e0857fcf58eaf8446ddadce
-#16 DONE 0.0s
+#16 sha256:e87ee6b1bff616dd68f137a03edeaf85b470afc7c7827ec907a1552de31f2c4a
+#16 CACHED
 
 #17 [builder 5/7] RUN yarn global add turbo
-#17 sha256:b47a3929e75c3b7cbb0657fc1d22d9b0525d028bf0b750708249c4ba5536cf3a
-#17 0.275 yarn global v1.22.19
-#17 0.315 [1/4] Resolving packages...
-#17 1.319 [2/4] Fetching packages...
-#17 3.379 [3/4] Linking dependencies...
-#17 3.440 [4/4] Building fresh packages...
-#17 3.545 success Installed "turbo@1.7.0" with binaries:
-#17 3.545       - turbo
-#17 3.549 Done in 3.28s.
-#17 DONE 3.7s
+#17 sha256:a3281a3c432da2354a12031b27037d18769fbad6031b441e358901c2383ef63e
+#17 CACHED
 
 #18 [builder 6/7] COPY . .
-#18 sha256:b2e3f81503951f62ddd35b55cf33c5336572d62c4ce2379c874c1f9045f83791
+#18 sha256:9c6a5de6b4589273a753eeb81f946bc6311c5f355ea2231fe6f29b4151eb43dd
 #18 DONE 0.2s
 
-#9 [installer  3/13] RUN wget -qO /bin/pnpm "https://github.com/pnpm/pnpm/releases/latest/download/pnpm-linuxstatic-x64" && chmod +x /bin/pnpm
-#9 sha256:cd298140085967c0c3e2dbd90a65ded0a5344ad214a4a5844ab82816409616f0
-#9 ...
-
 #19 [builder 7/7] RUN turbo prune --scope=web --docker
-#19 sha256:c28075e704ecd55b2fa3ff6c5f175270ef1aab9dd2aeb0998a2ebc920a6ac9cd
-#19 0.239 Generating pruned monorepo for web in /app/out
-#19 0.241  - Added eslint-config-custom
-#19 0.243  - Added tsconfig
-#19 0.249  - Added ui
-#19 0.320  - Added web
-#19 DONE 0.4s
+#19 sha256:8c0c93025602ab63c89809d49a70c31bd90985c534dd1c636e87000ed53c45a4
+#19 0.370 Generating pruned monorepo for web in /app/out
+#19 0.372  - Added eslint-config-custom
+#19 0.372  - Added tsconfig
+#19 0.376  - Added ui
+#19 0.463  - Added web
+#19 DONE 0.5s
 
 #9 [installer  3/13] RUN wget -qO /bin/pnpm "https://github.com/pnpm/pnpm/releases/latest/download/pnpm-linuxstatic-x64" && chmod +x /bin/pnpm
-#9 sha256:cd298140085967c0c3e2dbd90a65ded0a5344ad214a4a5844ab82816409616f0
-#9 DONE 9.0s
+#9 sha256:022c0b6fb54828838b5b39a231b4e4a2112220ec44b2e7bf32ad9e59c8295951
+#9 DONE 116.7s
 
 #10 [installer  4/13] RUN apk update
-#10 sha256:60f46728cf5a9d9f9ac88ced14040918f95a372c8fb6d0eeeb835c427953de13
-#10 0.180 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/main/aarch64/APKINDEX.tar.gz
-#10 0.697 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/community/aarch64/APKINDEX.tar.gz
-#10 1.166 v3.17.1-14-g398aec6128 [https://dl-cdn.alpinelinux.org/alpine/v3.17/main]
-#10 1.166 v3.17.1-15-g051b9a829c [https://dl-cdn.alpinelinux.org/alpine/v3.17/community]
-#10 1.166 OK: 17684 distinct packages available
-#10 DONE 1.2s
+#10 sha256:b8edb7fa2c10c8e4d7f142c3a42bfd5ba48bc863f5511a8c1912c45baf3cc309
+#10 0.286 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/main/aarch64/APKINDEX.tar.gz
+#10 9.145 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/community/aarch64/APKINDEX.tar.gz
+#10 29.11 v3.17.1-41-g571ad2f406 [https://dl-cdn.alpinelinux.org/alpine/v3.17/main]
+#10 29.11 v3.17.1-42-gc502f15588 [https://dl-cdn.alpinelinux.org/alpine/v3.17/community]
+#10 29.11 OK: 17684 distinct packages available
+#10 DONE 29.2s
 
 #11 [installer  5/13] WORKDIR /app
-#11 sha256:1ea52191c02d4d96defb53afa2eeb7a083abbf720151e5026a2ad9f304321d9a
+#11 sha256:784323e3e097c779548dc3b174496d136ec89f6ed8843534933668a6baab7b8b
 #11 DONE 0.0s
 
 #13 [installer  6/13] COPY .gitignore .gitignore
-#13 sha256:75d32a605ba852f0d43f2ef7a5141c816d7a366836bf59b9b72398f507d189f6
+#13 sha256:3abcc7cf3c04e92119e185fde1c8f14673d23eeccd6e388b5ed2dfd56fe1913b
 #13 DONE 0.0s
 
 #14 [installer  7/13] COPY .npmrc .npmrc
-#14 sha256:353c862363f04b9e79db4a3a179de6ccf761b79e24ab28859373f28a07cf4ffb
+#14 sha256:312f0f9a79cda6311446544f1aa1bb3ef446ca3edd0b4389b37e05c3cfc4bb82
 #14 DONE 0.0s
 
 #20 [installer  8/13] COPY --from=builder /app/out/json/ .
-#20 sha256:e22b21efae98462c8b4b4d880f7fdb140bb61bf16c949b40b829a1ccee187c87
+#20 sha256:96b73ec749c77c80e5b7437c11675fb167a09f3fd65ce27d43c398393782108d
 #20 DONE 0.0s
 
 #21 [installer  9/13] COPY --from=builder /app/out/pnpm-workspace.yaml ./pnpm-workspace.yaml
-#21 sha256:394c38101efc278e0537dbc8d83e4c0c9b8a2755211de94d6e2fbb386d1062d6
+#21 sha256:92d67dee2d81e5c7c5f1d9e84ffd1d0c73c120e86f68754e23618a79a4a64bde
 #21 DONE 0.0s
 
 #22 [installer 10/13] RUN pnpm install
+<<<<<<< HEAD
 #22 sha256:034053585a3dcf4be07ac07208aed4003d5e94ade79f538034b5726fcb69dca0
 #22 1.691 Scope: all 5 workspace projects
 #22 2.522 Progress: resolved 1, reused 0, downloaded 0, added 0
@@ -403,6 +347,99 @@
 #22 57.67 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: Failed
 #22 57.68  ELIFECYCLE  Command failed with exit code 1.
 >>>>>>> b06e64f (pnpm)
+=======
+#22 sha256:7c7ab6e4d0d2bacfa797ea13c80be4ab6ec3f3d5c5fdd1c6986bf39851640609
+#22 1.651 Scope: all 5 workspace projects
+#22 2.478 Progress: resolved 1, reused 0, downloaded 0, added 0
+#22 3.653 Progress: resolved 5, reused 0, downloaded 0, added 0
+#22 5.106 Progress: resolved 10, reused 0, downloaded 0, added 0
+#22 6.919 Progress: resolved 13, reused 0, downloaded 0, added 0
+#22 7.922 Progress: resolved 26, reused 0, downloaded 4, added 0
+#22 8.955 Progress: resolved 35, reused 0, downloaded 18, added 0
+#22 9.964 Progress: resolved 43, reused 0, downloaded 26, added 0
+#22 10.97 Progress: resolved 57, reused 0, downloaded 35, added 0
+#22 12.00 Progress: resolved 60, reused 0, downloaded 45, added 0
+#22 13.00 Progress: resolved 61, reused 0, downloaded 52, added 0
+#22 14.04 Progress: resolved 67, reused 0, downloaded 52, added 0
+#22 15.10 Progress: resolved 72, reused 0, downloaded 53, added 0
+#22 16.15 Progress: resolved 78, reused 0, downloaded 54, added 0
+#22 17.17 Progress: resolved 85, reused 0, downloaded 55, added 0
+#22 18.25 Progress: resolved 90, reused 0, downloaded 60, added 0
+#22 19.29 Progress: resolved 94, reused 0, downloaded 66, added 0
+#22 20.45 Progress: resolved 102, reused 0, downloaded 68, added 0
+#22 21.48 Progress: resolved 103, reused 0, downloaded 79, added 0
+#22 22.49 Progress: resolved 116, reused 0, downloaded 81, added 0
+#22 23.51 Progress: resolved 129, reused 0, downloaded 97, added 0
+#22 24.60 Progress: resolved 139, reused 0, downloaded 100, added 0
+#22 25.61 Progress: resolved 156, reused 0, downloaded 114, added 0
+#22 26.62 Progress: resolved 165, reused 0, downloaded 127, added 0
+#22 27.64 Progress: resolved 172, reused 0, downloaded 134, added 0
+#22 28.68 Progress: resolved 179, reused 0, downloaded 142, added 0
+#22 29.73 Progress: resolved 183, reused 0, downloaded 145, added 0
+#22 30.75 Progress: resolved 189, reused 0, downloaded 146, added 0
+#22 31.77 Progress: resolved 196, reused 0, downloaded 152, added 0
+#22 32.77 Progress: resolved 207, reused 0, downloaded 173, added 0
+#22 33.79 Progress: resolved 227, reused 0, downloaded 186, added 0
+#22 34.79 Progress: resolved 246, reused 0, downloaded 204, added 0
+#22 35.81 Progress: resolved 261, reused 0, downloaded 212, added 0
+#22 36.83 Progress: resolved 269, reused 0, downloaded 227, added 0
+#22 37.84 Progress: resolved 282, reused 0, downloaded 238, added 0
+#22 38.85 Progress: resolved 293, reused 0, downloaded 250, added 0
+#22 39.85 Progress: resolved 304, reused 0, downloaded 259, added 0
+#22 40.85 Progress: resolved 307, reused 0, downloaded 275, added 0
+#22 41.88 Progress: resolved 321, reused 0, downloaded 280, added 0
+#22 42.89 Progress: resolved 327, reused 0, downloaded 297, added 0
+#22 43.89 Progress: resolved 328, reused 0, downloaded 302, added 0
+#22 44.91 Progress: resolved 331, reused 0, downloaded 307, added 0
+#22 45.65 Packages: +317
+#22 45.65 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#22 46.43 Progress: resolved 332, reused 0, downloaded 308, added 0
+#22 46.83 Packages are hard linked from the content-addressable store to the virtual store.
+#22 46.83   Content-addressable store is at: /root/.local/share/pnpm/store/v3
+#22 46.83   Virtual store is at:             node_modules/.pnpm
+#22 47.48 Progress: resolved 332, reused 0, downloaded 311, added 106
+#22 48.49 Progress: resolved 332, reused 0, downloaded 311, added 272
+#22 49.49 Progress: resolved 332, reused 0, downloaded 311, added 312
+#22 51.24 Progress: resolved 332, reused 0, downloaded 312, added 312
+#22 52.25 Progress: resolved 332, reused 0, downloaded 313, added 314
+#22 55.38 Progress: resolved 332, reused 0, downloaded 314, added 314
+#22 56.38 Progress: resolved 332, reused 0, downloaded 314, added 315
+#22 60.21 Progress: resolved 332, reused 0, downloaded 315, added 315
+#22 61.47 Progress: resolved 332, reused 0, downloaded 315, added 316
+#22 62.47 Progress: resolved 332, reused 0, downloaded 316, added 317, done
+#22 62.87 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall$ node install.js
+#22 63.02 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: [turbo] Failed to find package "turbo-linux-arm64" on the file system
+#22 63.02 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: This can happen if you use the "--no-optional" flag. The "optionalDependencies"
+#22 63.02 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: package.json feature is used by turbo to install the correct binary executable
+#22 63.03 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: for your current platform. This install script will now attempt to work around
+#22 63.03 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: this. If that fails, you need to remove the "--no-optional" flag to use turbo.
+#22 63.03 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: node:internal/modules/cjs/loader:1039
+#22 63.03 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:   const err = new Error(message);
+#22 63.03 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:               ^
+#22 63.03 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: Error: Cannot find module 'turbo'
+#22 63.03 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: Require stack:
+#22 63.03 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: - /app/node_modules/.pnpm/turbo@1.7.0/node_modules/turbo/node-platform.js
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: - /app/node_modules/.pnpm/turbo@1.7.0/node_modules/turbo/install.js
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:     at Module._resolveFilename (node:internal/modules/cjs/loader:1039:15)
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:     at Function.resolve (node:internal/modules/cjs/helpers:109:19)
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:     at downloadedBinPath (/app/node_modules/.pnpm/turbo@1.7.0/node_modules/turbo/node-platform.js:44:44)
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:     at checkAndPreparePackage (/app/node_modules/.pnpm/turbo@1.7.0/node_modules/turbo/install.js:285:15)
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:     at Object.<anonymous> (/app/node_modules/.pnpm/turbo@1.7.0/node_modules/turbo/install.js:310:1)
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:     at Module._compile (node:internal/modules/cjs/loader:1218:14)
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:     at Module._extensions..js (node:internal/modules/cjs/loader:1272:10)
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:     at Module.load (node:internal/modules/cjs/loader:1081:32)
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:     at Module._load (node:internal/modules/cjs/loader:922:12)
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) {
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:   code: 'MODULE_NOT_FOUND',
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:   requireStack: [
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:     '/app/node_modules/.pnpm/turbo@1.7.0/node_modules/turbo/node-platform.js',
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:     '/app/node_modules/.pnpm/turbo@1.7.0/node_modules/turbo/install.js'
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall:   ]
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: }
+#22 63.04 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: Node.js v18.13.0
+#22 63.05 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: Failed
+#22 63.07  ELIFECYCLE  Command failed with exit code 1.
+>>>>>>> d417ea9 (add build command)
 #22 ERROR: executor failed running [/bin/sh -c pnpm install]: exit code: 1
 ------
  > [installer 10/13] RUN pnpm install:
