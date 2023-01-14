@@ -1,15 +1,7 @@
 # This Dockerfile is copy-pasted into our main docs at /docs/handbook/deploying-with-docker.
 # Make sure you update both files!
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 FROM node:18-alpine AS builder
-=======
-FROM node:16-alpine AS builder
->>>>>>> b06e64f (pnpm)
-=======
-FROM node:18-alpine AS builder
->>>>>>> d417ea9 (add build command)
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
 RUN apk update
@@ -20,17 +12,10 @@ COPY . .
 RUN turbo prune --scope=web --docker
 
 # Add lockfile and package.json's of isolated subworkspace
-<<<<<<< HEAD
-<<<<<<< HEAD
 FROM node:18-alpine AS installer
-=======
-FROM node:16-alpine AS installer
->>>>>>> b06e64f (pnpm)
-=======
-FROM node:18-alpine AS installer
->>>>>>> d417ea9 (add build command)
 RUN apk add --no-cache libc6-compat
-RUN wget -qO /bin/pnpm "https://github.com/pnpm/pnpm/releases/latest/download/pnpm-linuxstatic-x64" && chmod +x /bin/pnpm
+# RUN wget -qO /bin/pnpm "https://github.com/pnpm/pnpm/releases/latest/download/pnpm-linuxstatic-x64" && chmod +x /bin/pnpm
+RUN npm i -g pnpm
 RUN apk update
 WORKDIR /app
 
@@ -48,15 +33,7 @@ COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
 RUN pnpm turbo run build --filter=web...
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 FROM node:18-alpine AS runner
-=======
-FROM node:16-alpine AS runner
->>>>>>> b06e64f (pnpm)
-=======
-FROM node:18-alpine AS runner
->>>>>>> d417ea9 (add build command)
 WORKDIR /app
 
 # Don't run production as root
