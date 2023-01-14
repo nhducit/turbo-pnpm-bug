@@ -24,7 +24,7 @@ COPY .gitignore .gitignore
 COPY .npmrc .npmrc
 COPY --from=builder /app/out/json/ .
 # COPY --from=builder /app/out/yarn.lock ./yarn.lock
-# COPY --from=builder /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
+COPY --from=builder /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
 COPY --from=builder /app/out/pnpm-workspace.yaml ./pnpm-workspace.yaml
 RUN pnpm install
 

@@ -1,10 +1,134 @@
 #1 [internal] load build definition from Dockerfile
-#1 sha256:8d60338f8647c93c08aa8873e254ff57ce8e44ea78a97d1d39ff19c52c6b5b19
-#1 transferring dockerfile: 2.38kB 0.0s done
+#1 sha256:f4f2a2b6b46497cfc9c174db92e9e3e4b7ccf7b85a89bd4a98eab7d0836f7e10
+#1 transferring dockerfile: 1.89kB 0.0s done
 #1 DONE 0.0s
 
 #2 [internal] load .dockerignore
-#2 sha256:6b0252e7a7081a15a4d280f899f8095bbd23b8d6389705e2c607fc0135d70183
-#2 transferring context: 136B done
+#2 sha256:c06be75a0976e6c0085833d73a588577a94c1d7025c0d4f67d0059cf3e0603d5
+#2 transferring context: 34B done
 #2 DONE 0.0s
-failed to solve with frontend dockerfile.v0: failed to create LLB definition: dockerfile parse error line 4: unknown instruction: <<<<<<<
+
+#3 [internal] load metadata for docker.io/library/node:18-alpine
+#3 sha256:5ee8ea8626137e4a4e007f934eed3f693a5155be1152f5d3acaa7750c4ab9271
+#3 DONE 1.3s
+
+#4 [builder 1/7] FROM docker.io/library/node:18-alpine@sha256:fda98168118e5a8f4269efca4101ee51dd5c75c0fe56d8eb6fad80455c2f5827
+#4 sha256:653270ac117a75d57cbf03113e544d83ca81c638f49e2dc103b2b7a209e74913
+#4 DONE 0.0s
+
+#12 [internal] load build context
+#12 sha256:553b3db350709088effacef8fefc17f2cf2f92f40f4ac27ad0adcc3407650878
+#12 transferring context: 41.01kB 0.1s done
+#12 DONE 0.1s
+
+#8 [builder 2/7] RUN apk add --no-cache libc6-compat
+#8 sha256:eb4d1971c7ec95753c9afc48519235634bd0c8fcdaed3124dee6306a82c0ec8e
+#8 CACHED
+
+#15 [builder 3/7] RUN apk update
+#15 sha256:7eb53cb429d09c4fcd89467bf879cb8da712e5c6f1c80ea306fff6305a805008
+#15 CACHED
+
+#16 [builder 4/7] WORKDIR /app
+#16 sha256:e87ee6b1bff616dd68f137a03edeaf85b470afc7c7827ec907a1552de31f2c4a
+#16 CACHED
+
+#17 [builder 5/7] RUN yarn global add turbo
+#17 sha256:a3281a3c432da2354a12031b27037d18769fbad6031b441e358901c2383ef63e
+#17 CACHED
+
+#18 [builder 6/7] COPY . .
+#18 sha256:f115d0df6b265017033444896b00c20b9e17a45fd76db60525eb2e7ddbbdbe5a
+#18 DONE 0.1s
+
+#19 [builder 7/7] RUN turbo prune --scope=web --docker
+#19 sha256:fa37d4ba441ab56031a83a59ef4e9d5056467f847d4fb3d721cde5139a5fe8a1
+#19 0.373 Generating pruned monorepo for web in /app/out
+#19 0.374  - Added eslint-config-custom
+#19 0.375  - Added tsconfig
+#19 0.379  - Added ui
+#19 0.381  - Added web
+#19 DONE 0.4s
+
+#14 [installer  7/14] COPY .npmrc .npmrc
+#14 sha256:cd40d3db7d2bfb51315eb1117d38ea9e0b4dbc8c7be8c4c062f86d202abed88b
+#14 CACHED
+
+#11 [installer  5/14] WORKDIR /app
+#11 sha256:55764dcaab6446bc1c205ffadb5ee622952990c4632ef512113a3696448444a8
+#11 CACHED
+
+#10 [installer  4/14] RUN apk update
+#10 sha256:5abd6f3ab1f20b25dd1709c0f9696d1c116e197122f0072c32d6a279b5818b5f
+#10 CACHED
+
+#13 [installer  6/14] COPY .gitignore .gitignore
+#13 sha256:38d22b08b85f1445b76c2618d4a7018c965513b758a684254c43b5431798357f
+#13 CACHED
+
+#9 [installer  3/14] RUN npm i -g pnpm
+#9 sha256:bb5f36b28befe0100a66f5a3cefc153882a85a22c48dd527b79f33a38f4bbfdb
+#9 CACHED
+
+#20 [installer  8/14] COPY --from=builder /app/out/json/ .
+#20 sha256:5b5e88e164628273db38ab2126419ef59c572ae1907aa9ef001e0d9e747e32cf
+#20 CACHED
+
+#21 [installer  9/14] COPY --from=builder /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
+#21 sha256:4005d4a38d3606cbddb46129db3bd305448414e04522b5f06ce516b40bf3a7e2
+#21 DONE 0.0s
+
+#22 [installer 10/14] COPY --from=builder /app/out/pnpm-workspace.yaml ./pnpm-workspace.yaml
+#22 sha256:885c6dc3c7776d2667c406c75002e345b0c51fd2fbbc739232c293a70dde8deb
+#22 DONE 0.0s
+
+#23 [installer 11/14] RUN pnpm install
+#23 sha256:b0c378398c67fb80437a48b9ae281bff4f2d3e9eb58773d7bd32fc060a382606
+#23 0.658 Scope: all 5 workspace projects
+#23 0.743 Lockfile is up to date, resolution step is skipped
+#23 0.761 Progress: resolved 1, reused 0, downloaded 0, added 0
+#23 0.821 Packages: +317
+#23 0.821 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#23 1.231 Packages are hard linked from the content-addressable store to the virtual store.
+#23 1.231   Content-addressable store is at: /root/.local/share/pnpm/store/v3
+#23 1.231   Virtual store is at:             node_modules/.pnpm
+#23 1.767 Progress: resolved 317, reused 0, downloaded 17, added 16
+#23 2.765 Progress: resolved 317, reused 0, downloaded 75, added 76
+#23 3.078 
+#23 3.078    ╭──────────────────────────────────────────────────────────────────╮
+#23 3.078    │                                                                  │
+#23 3.078    │                Update available! 7.24.3 → 7.25.0.                │
+#23 3.078    │   Changelog: https://github.com/pnpm/pnpm/releases/tag/v7.25.0   │
+#23 3.078    │                Run "pnpm add -g pnpm" to update.                 │
+#23 3.078    │                                                                  │
+#23 3.078    │      Follow @pnpmjs for updates: https://twitter.com/pnpmjs      │
+#23 3.078    │                                                                  │
+#23 3.078    ╰──────────────────────────────────────────────────────────────────╯
+#23 3.078 
+#23 3.766 Progress: resolved 317, reused 0, downloaded 132, added 132
+#23 4.766 Progress: resolved 317, reused 0, downloaded 190, added 191
+#23 5.768 Progress: resolved 317, reused 0, downloaded 248, added 248
+#23 6.769 Progress: resolved 317, reused 0, downloaded 306, added 307
+#23 7.769 Progress: resolved 317, reused 0, downloaded 312, added 312
+#23 8.771 Progress: resolved 317, reused 0, downloaded 313, added 314
+#23 9.777 Progress: resolved 317, reused 0, downloaded 315, added 316
+#23 27.96 Progress: resolved 317, reused 0, downloaded 316, added 316
+#23 28.23 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall$ node install.js
+#23 28.33 .../.pnpm/turbo@1.7.0/node_modules/turbo postinstall: Done
+#23 28.60 
+#23 28.60 devDependencies:
+#23 28.60 + eslint-config-custom 0.0.0 <- packages/eslint-config-custom
+#23 28.60 + prettier 2.8.3
+#23 28.60 + turbo 1.7.0
+#23 28.60 
+#23 28.61 Done in 28.4s
+#23 28.97 Progress: resolved 317, reused 0, downloaded 316, added 317, done
+#23 DONE 29.6s
+
+#24 [installer 12/14] COPY --from=builder /app/out/full/ .
+#24 sha256:b587b029a6e38ae88f88635fce4b9bff9d646d851eec211cd11cb9113b78a3e4
+#24 ERROR: cannot copy to non-directory: /var/lib/docker/overlay2/92nrp8ug0uhgjmrxp0aiyz6id/merged/app/apps/web/node_modules/eslint-config-custom
+------
+ > [installer 12/14] COPY --from=builder /app/out/full/ .:
+------
+cannot copy to non-directory: /var/lib/docker/overlay2/92nrp8ug0uhgjmrxp0aiyz6id/merged/app/apps/web/node_modules/eslint-config-custom
