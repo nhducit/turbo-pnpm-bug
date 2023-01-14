@@ -4,13 +4,17 @@ importers:
 
   .:
     specifiers:
+      '@esbuild/linux-arm64': ^0.16.17
       eslint-config-custom: workspace:*
       prettier: latest
       turbo: 1.7.0
+      turbo-linux-arm64: 1.7.0
     devDependencies:
+      '@esbuild/linux-arm64': 0.16.17
       eslint-config-custom: link:packages/eslint-config-custom
       prettier: 2.8.2
       turbo: 1.7.0
+      turbo-linux-arm64: 1.7.0
 
   apps/api:
     specifiers:
@@ -533,7 +537,6 @@ packages:
     os: [linux]
     requiresBuild: true
     dev: true
-    optional: true
 
   /@esbuild/linux-ia32/0.16.17:
     resolution: {integrity: sha512-kiX69+wcPAdgl3Lonh1VI7MBr16nktEvOfViszBSxygRQqSpzv7BffMKRPMFwzeJGPxcio0pdD3kYQGpqQ2SSg==}
@@ -5633,9 +5636,7 @@ packages:
     resolution: {integrity: sha512-AJEx2jX+zO5fQtJpO3r6uhTabj4oSA5ZhB7zTs/rwu/XqoydsvStA4X8NDW4poTbOjF7DcSHizqwi04tSMzpJw==}
     cpu: [arm64]
     os: [linux]
-    requiresBuild: true
     dev: true
-    optional: true
 
   /turbo-windows-64/1.7.0:
     resolution: {integrity: sha512-ewj7PPv2uxqv0r31hgnBa3E5qwUu7eyVRP5M1gB/TJXfSHduU79gbxpKCyxIZv2fL/N2/3U7EPOQPSZxBAoljA==}
